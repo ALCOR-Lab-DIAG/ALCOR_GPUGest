@@ -52,7 +52,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 - `--host 0.0.0.0`: Makes the server accessible from all IP addresses
 - `--port 8000`: Specifies the server port
 
-The backend will be accessible at: **http://localhost:8000**
+The backend will be accessible at: **http://TBD:8000**
 
 ### Frontend (Development Server)
 
@@ -62,7 +62,7 @@ To start the frontend development server:
 npm run dev
 ```
 
-The frontend will be accessible at: **http://localhost:3000** (or another configured port)
+The frontend will be accessible at: **http://TBD:3000**
 
 ## 🔗 Frontend-Backend Communication
 
