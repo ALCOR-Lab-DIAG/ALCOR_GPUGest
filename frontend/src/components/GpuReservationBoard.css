@@ -1,0 +1,367 @@
+.gpu-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fb;
+  min-height: 100vh;
+}
+
+.gpu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.gpu-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.gpu-header button {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.gpu-header button:hover {
+  background-color: #1d4ed8;
+}
+
+.gpu-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  max-width: 100%;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.gpu-table {
+  border-collapse: collapse;
+  width: max-content;
+}
+
+.gpu-table th,
+.gpu-table td {
+  border: 1px solid #e2e8f0;
+  padding: 6px 12px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.gpu-table th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.scroll-box {
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: #f9fafb;
+}
+
+.scroll-box label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.modal-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #22c55e;
+  color: white;
+}
+
+.modal-actions button[type="submit"]:hover {
+  background-color: #16a34a;
+}
+
+.modal-actions button[type="button"] {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.modal-actions button[type="button"]:hover {
+  background-color: #d1d5db;
+}
+
+.highlight-cell {
+  background-color: #d1fae5 !important; /* verde chiaro */
+  font-weight: bold;
+  color: #065f46;
+}
+
+.auth-error-popup {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 1rem 1.25rem;
+  border-left: 5px solid #dc2626;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1002;
+  animation: fadeInDown 0.3s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content form input {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-content form input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modal-actions button {
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+}
+
+.modal-actions button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tab-buttons button {
+  background: #e5e7eb;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px 6px 0 0;
+  margin: 0 5px;
+}
+
+.tab-buttons button.active {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+.maintenance-cell {
+  background-color: #fff3cd !important;
+  position: relative;
+}
+
+.maintenance-cell::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #ffc107;
+  border-radius: 50%;
+}
+
+.highlight-cell.maintenance-cell {
+  background-color: #d4edda !important;
+  border-left: 3px solid #ffc107;
+}
+
+.auth-modal-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;      /* o 400 se preferisci più leggero */
+  font-size: 1.75rem;    /* regola a piacere */
+  margin-bottom: 1rem;   /* spazio sotto */
+}
+
+.thesis-student-label {
+  font-family: 'Roboto', sans-serif;
+}
+
+.gpu-name-gtx1080 {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  font-weight: bold;
+}
+
+.gpu-name-titanv {
+  background-color: #bbdefb;
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+.gpu-name-rtx5000 {
+  background-color: #90caf9;
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+.category-separator {
+  border-bottom: 2px dashed #ccc;
+}
+
+.gpu-table-wrapper {
+  overflow-x: auto;
+  position: relative;
+}
+
+.gpu-table {
+  position: relative;
+}
+
+.gpu-table th:first-child,
+.gpu-table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  background-color: white;
+  border-right: 2px solid #ddd;
+}
+
+.gpu-table th:first-child {
+  z-index: 11;
+  background-color: #f5f5f5;
+}
+
+/* Assicura che le celle con colori mantengano il background */
+.gpu-table td:first-child.gpu-name-gtx1080 {
+  background-color: #e3f2fd !important;
+}
+
+.gpu-table td:first-child.gpu-name-titanv {
+  background-color: #bbdefb !important;
+}
+
+.gpu-table td:first-child.gpu-name-rtx5000 {
+  background-color: #90caf9 !important;
+}
+
+.tutor-indicator {
+  font-weight: bold;
+  font-size: 0.8em;
+  vertical-align: super;
+  color: #007bff;
+  position: relative;
+  cursor: help;
+}
+
+.tutor-indicator::after {
+  content: attr(data-tutor);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.tutor-indicator:hover::after {
+  opacity: 1;
+}
