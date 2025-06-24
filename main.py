@@ -6,19 +6,22 @@ from jose import JWTError, jwt
 from pydantic import BaseModel, EmailStr
 from typing import List, Optional
 from datetime import date, datetime, timedelta
+from dotenv import load_dotenv
 import sqlite3
+import os
 
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-SECRET_KEY = "your-secret-key"
+load_dotenv()
+
+SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
-
-EMAIL_SENDER = "alcorlabgpu@gmail.com"
-EMAIL_PASSWORD = "noef teax jhoi atgv"
+EMAIL_SENDER = os.getenv("GMAIL_SENDER")
+EMAIL_PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 

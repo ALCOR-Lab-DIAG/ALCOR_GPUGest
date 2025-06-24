@@ -1,3 +1,4 @@
+.env
 GPUGest/
 __pycache__/
 frontend/node_modules
