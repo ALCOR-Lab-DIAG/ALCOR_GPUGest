@@ -4,32 +4,7 @@
 - **Versione**: 3.12
 
 ## Python Packages
-Di seguito i pacchetti Python installati:
-
-- `annotated-types`==0.7.0  
-- `anyio`==4.9.0  
-- `click`==8.2.1  
-- `dnspython`==2.7.0  
-- `ecdsa`==0.19.1  
-- `email_validator`==2.2.0  
-- `fastapi`==0.115.12  
-- `h11`==0.16.0  
-- `idna`==3.10  
-- `passlib`==1.7.4  
-- `pyasn1`==0.6.1  
-- `pydantic`==2.11.7  
-- `pydantic_core`==2.33.2  
-- `python-jose`==3.5.0  
-- `python-multipart`==0.0.20  
-- `rsa`==4.9.1  
-- `six`==1.17.0  
-- `sniffio`==1.3.1  
-- `starlette`==0.46.2  
-- `typing-inspection`==0.4.1  
-- `typing_extensions`==4.14.0  
-- `uvicorn`==0.34.3  
+I pacchetti Python sono elencati nel file `requirements.txt`:
 
 ## NPM Packages
-Di seguito i pacchetti NPM elencati nel file `package.json`:
-
-- *Vedi `packages.json` per il dettaglio completo*
+I pacchetti NPM sono elencati nel file `package.json`:
